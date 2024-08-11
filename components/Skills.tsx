@@ -19,6 +19,43 @@ import { SiSass, SiMysql, SiMongodb, SiSpring, SiNestjs } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+interface SkillProps {
+  id: string;
+  name: string;
+  icon: JSX.Element;
+  colorClass: string;
+  onClick: (id: string) => void;
+  isAnimating: string;
+}
+
+const Skill: React.FC<SkillProps> = ({
+  id,
+  name,
+  icon,
+  colorClass,
+  onClick,
+  isAnimating,
+}) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <motion.div
+      ref={ref}
+      className={`${styles.skillItem} ${colorClass} ${isAnimating}`}
+      onClick={() => onClick(id)}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={inView ? { opacity: 1, scale: 1 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      <p className={styles.skillName}>{name}</p>
+      {icon}
+    </motion.div>
+  );
+};
+
 export const Skills: React.FC = () => {
   const [animate, setAnimate] = useState<{ [key: string]: string }>({});
 
@@ -33,7 +70,7 @@ export const Skills: React.FC = () => {
         ...prevState,
         [id]: "",
       }));
-    }, 1000); // Ajusta la duración del timeout según la duración de la animación
+    }, 1000);
   };
 
   const skills = [
@@ -85,7 +122,6 @@ export const Skills: React.FC = () => {
       icon: <SiExpress className={styles.skillIcon} />,
       colorClass: styles.expressColor,
     },
-
     {
       id: "nest",
       name: "Nest.js",
@@ -151,35 +187,22 @@ export const Skills: React.FC = () => {
   return (
     <section id={styles.skill}>
       <h1 className={styles.skillsHeading}>Habilidades</h1>
-
       <section className={styles.skillsSection}>
         {["Frontend", "Backend", "Gestión"].map((category, idx) => (
           <div key={idx} className={styles.skillCategory}>
             <h2 className={styles.categoryTitle}>{category}</h2>
             <div className={styles.skillList}>
-              {skills.slice(idx * 6, (idx + 1) * 6).map((skill) => {
-                const { ref, inView } = useInView({
-                  triggerOnce: true,
-                  threshold: 0.1,
-                });
-
-                return (
-                  <motion.div
-                    key={skill.id}
-                    ref={ref}
-                    className={`${styles.skillItem} ${skill.colorClass} ${
-                      animate[skill.id]
-                    }`}
-                    onClick={() => handleClick(skill.id)}
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                  >
-                    <p className={styles.skillName}>{skill.name}</p>
-                    {skill.icon}
-                  </motion.div>
-                );
-              })}
+              {skills.slice(idx * 6, (idx + 1) * 6).map((skill) => (
+                <Skill
+                  key={skill.id}
+                  id={skill.id}
+                  name={skill.name}
+                  icon={skill.icon}
+                  colorClass={skill.colorClass}
+                  onClick={handleClick}
+                  isAnimating={animate[skill.id] || ""}
+                />
+              ))}
             </div>
           </div>
         ))}

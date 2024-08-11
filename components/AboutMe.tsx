@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaDownload } from "react-icons/fa";
-import styles from "../styles/aboutMe.module.css";
+import styles from "../styles/About.module.css";
 
 export default function AboutMe() {
   const controls = useAnimation();
