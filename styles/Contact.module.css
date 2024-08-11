@@ -1,0 +1,85 @@
+/* src/components/ContactForm.module.css */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  color: var(--bg-color);
+  border-radius: 4px;
+  transition: border-color 0.3s;
+  background: var(--box-color);
+
+  outline: none;
+  font-size: 0.9rem;
+  padding: 15px;
+
+  border-radius: 0.4rem;
+}
+
+.formInput[type="textarea"] {
+  height: 200px; /* Ajusta la altura del textarea aquí */
+  padding: 0.75rem; /* Ajusta el relleno si es necesario */
+}
+.formInputTextarea {
+  height: 199px;
+
+  padding: 0.75rem; /* Ajusta el relleno si es necesario */
+  resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.error {
+  border-color: red;
+}
+
+.success {
+  border-color: green;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.submitButton {
+  width: 120px;
+  padding: 0.75rem;
+  border: none;
+  background: var(--main-color-hover);
+  font-weight: bold;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submitButton:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.spinner {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.successMessage {
+  color: green;
+  font-size: 1rem;
+  text-align: center;
+}

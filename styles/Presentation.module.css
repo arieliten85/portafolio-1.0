@@ -1,0 +1,109 @@
+#home {
+  padding-top: 150px !important;
+  min-height: 650px !important;
+  padding: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.homeContent {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.homeContent .perfil {
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  margin-bottom: 30px;
+}
+
+.homeText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.greeting {
+  position: relative;
+  color: var(--main-color);
+  font-weight: bolder;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.greeting::before,
+.greeting::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  height: 2.2px;
+  width: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.greeting::before {
+  left: -25px;
+}
+
+.greeting::after {
+  right: -25px;
+}
+
+.homeText h2 {
+  color: var(--main-color);
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.homeText h3 {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.resalt {
+  color: var(--main-color);
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.homeText h2 .span {
+  color: white !important;
+  font-weight: bold;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social svg {
+  width: 40px; /* Tamaño del ícono */
+  height: 40px; /* Tamaño del ícono */
+
+  transition: color 0.3s, transform 0.3s; /* Transición para el efecto hover */
+  color: var(--bg-color);
+  background: var(--container-color);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.social svg:hover {
+  color: #000; /* Cambia el color en hover */
+  transform: scale(1.1); /* Efecto de agrandamiento en hover */
+}

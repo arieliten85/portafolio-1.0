@@ -1,0 +1,148 @@
+#nav {
+  background-color: var(--heading-color);
+
+  padding-left: 30px;
+  padding-right: 20px;
+  position: fixed;
+  width: 100%;
+
+  align-items: center;
+  z-index: 10;
+}
+
+#wrapper {
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+  max-width: 930px;
+  width: 100%;
+}
+
+.logo {
+  margin: 0;
+  color: var(--main-color);
+  z-index: 20;
+  font-size: 20px;
+}
+
+.navbarToggle {
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  user-select: none;
+  cursor: pointer;
+  z-index: 20;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.line {
+  fill: none;
+  transition: stroke 400ms ease, stroke-dasharray 400ms ease,
+    stroke-dashoffset 400ms ease;
+  stroke: var(--main-color);
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.line.top {
+  stroke-dasharray: 40 139;
+}
+
+.line.bottom {
+  stroke-dasharray: 20 180;
+  stroke-dashoffset: -20px;
+}
+
+.navbarToggle.active {
+  transform: rotate(45deg);
+}
+
+.navbarToggle.active .line {
+  stroke: var(--main-color);
+}
+
+.navbarToggle.active .line.top {
+  stroke-dashoffset: -98px;
+}
+
+.navbarToggle.active .line.bottom {
+  stroke-dashoffset: -138px;
+}
+
+.navbarToggle:not(.active):hover .line.bottom {
+  stroke-dasharray: 40 180;
+  stroke-dashoffset: 0;
+}
+
+.navbar {
+  position: fixed;
+  /* width: 100%; */
+  z-index: 5;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 150px;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  opacity: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  text-align: left;
+  padding: 20px 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all ease 500ms;
+  position: relative;
+}
+
+.navbar a:hover {
+  letter-spacing: 3px;
+}
+
+.navbar a:hover::before {
+  opacity: 0.2;
+}
+
+#bgCircle {
+  transform: scale(0);
+  width: 80px;
+  height: 80px;
+  /* background: #4e6ee2; */
+  background-color: var(--heading-color);
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 50%;
+  z-index: 4;
+}

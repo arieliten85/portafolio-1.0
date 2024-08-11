@@ -1,0 +1,246 @@
+.worksContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+
+  padding: 1.5rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.worksItem {
+  width: 100%;
+  max-width: 300px;
+  height: 420px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ImageWrapper {
+  perspective: 1000px;
+  position: relative;
+  width: 100%;
+
+  height: 400px;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  background: var(--heading-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+
+.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.flipped .back {
+  transform: rotateY(0deg);
+}
+.dataContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 200px;
+  padding-top: 15px;
+}
+.tags {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: #ddd;
+  padding: 1px 5px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.react-tag {
+  background-color: var(--react-color);
+}
+
+.sass-tag {
+  background-color: var(--sass-color);
+}
+
+.typescript-tag {
+  background-color: var(--ts-color);
+}
+
+.node-tag {
+  background-color: var(--node-color);
+}
+
+.next-tag {
+  background-color: var(--next-color);
+}
+.java-tag {
+  background-color: var(--java-color);
+}
+
+.springboot-tag {
+  background-color: var(--spring-color);
+}
+
+.css-tag {
+  background-color: var(--css-color);
+}
+.jwt-tag {
+  background-color: var(--jwt-color);
+}
+
+.firebase-tag {
+  background-color: var(--firebase-color);
+}
+
+.express-tag {
+  background-color: var(--express-color);
+}
+
+.mongodb-tag {
+  background-color: var(--mongo-color);
+}
+.socket-tag {
+  background-color: var(--socket-color);
+}
+
+.docker-tag {
+  background-color: var(--docker-color);
+}
+
+.postgresql-tag {
+  background-color: var(--postgresql-color);
+}
+.passport-tag {
+  background-color: var(--passport-color);
+}
+.bcrypt-tag {
+  background-color: var(--bcrypt-color);
+}
+.mysql-tag {
+  background-color: var(--mysql-color);
+}
+
+.linkContent {
+  display: flex;
+  gap: 10px;
+  color: wheat;
+  width: 100%;
+}
+
+.webButton,
+.codeButton {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+
+.webButton {
+  color: white;
+  background: var(--main-color);
+}
+.webButton:hover {
+  background: var(--main-color-hover);
+}
+
+.codeButton {
+  color: white;
+  background-color: var(--heading-color);
+}
+.codeButton:hover {
+  background-color: var(--heading-color-hover);
+}
+
+.indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.indicator.hidden {
+  display: none;
+}
+
+.indicator::after {
+  content: "🔄";
+}
+
+/* 
+@media (min-width: 1240px) {
+  .tdmImageWrapper {
+    perspective: none;
+    flex-direction: column;
+  }
+
+  .flipped .front,
+  .flipped .back {
+    transform: none;
+  }
+
+  .front {
+    position: relative;
+  }
+
+  .back {
+    display: block;
+    position: static;
+    margin-top: 10px;
+    transform: none;
+    height: auto;
+    padding: 10px;
+  }
+} */
