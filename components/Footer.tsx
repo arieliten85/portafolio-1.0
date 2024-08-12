@@ -1,7 +1,14 @@
 import styles from "../styles/Footer.module.css";
 import React, { useState } from "react";
 import { MdContentCopy } from "react-icons/md"; // Icono de copiar
-import { FaGithub, FaLinkedin, FaFileAlt, FaCheck } from "react-icons/fa"; // Íconos de GitHub, LinkedIn y CV
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFileAlt,
+  FaCheck,
+  FaDownload,
+} from "react-icons/fa"; // Íconos de GitHub, LinkedIn y CV
+import Link from "next/link";
 
 const Footer = () => {
   const [copySuccess, setCopySuccess] = useState(false);
@@ -42,14 +49,9 @@ const Footer = () => {
           >
             <FaLinkedin size={20} />
           </a>
-          <a
-            href="/path-to-your-cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.iconLink}
-          >
+          <Link href="/pdf/CV.pdf" target="_blank" className={styles.iconLink}>
             <FaFileAlt size={20} />
-          </a>
+          </Link>
         </div>
       </div>
 
