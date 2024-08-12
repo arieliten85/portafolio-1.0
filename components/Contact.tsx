@@ -49,80 +49,84 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.skillsHeading}>Contacto</h1>
-      <Formik
-        initialValues={{ name: "", email: "", message: "" }}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        {({ errors, touched, isValid, dirty }) => (
-          <Form className={styles.form}>
-            <div className={styles.formGroup}>
-              <Field
-                type="text"
-                name="name"
-                className={`${styles.formInput} ${
-                  touched.name && errors.name ? styles.error : ""
-                } ${touched.name && !errors.name ? styles.success : ""}`}
-                placeholder="Nombre"
-              />
-              <ErrorMessage
-                name="name"
-                component="div"
-                className={styles.errorMessage}
-              />
-            </div>
-
-            <div className={styles.formGroup}>
-              <Field
-                type="email"
-                name="email"
-                className={`${styles.formInput} ${
-                  touched.email && errors.email ? styles.error : ""
-                } ${touched.email && !errors.email ? styles.success : ""}`}
-                placeholder="Correo electrónico"
-              />
-              <ErrorMessage
-                name="email"
-                component="div"
-                className={styles.errorMessage}
-              />
-            </div>
-
-            <div className={styles.formGroup}>
-              <Field
-                as="textarea"
-                name="message"
-                className={`${styles.formInput} ${styles.formInputTextarea} ${
-                  touched.message && errors.message ? styles.error : ""
-                } ${touched.message && !errors.message ? styles.success : ""}`}
-                placeholder="Mensaje"
-              />
-              <ErrorMessage
-                name="message"
-                component="div"
-                className={styles.errorMessage}
-              />
-            </div>
-
-            <button
-              type="submit"
-              className={styles.submitButton}
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Enviando..." : "Enviar"}
-            </button>
-
-            {isSubmitting && <div className={styles.spinner}>🔄</div>}
-            {isSubmitted && !isSubmitting && (
-              <div className={styles.successMessage}>
-                ¡Mensaje enviado con éxito!
+    <div id="contact">
+      <div className={styles.container}>
+        <h1 className={styles.skillsHeading}>Contacto</h1>
+        <Formik
+          initialValues={{ name: "", email: "", message: "" }}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {({ errors, touched }) => (
+            <Form className={styles.form}>
+              <div className={styles.formGroup}>
+                <Field
+                  type="text"
+                  name="name"
+                  className={`${styles.formInput} ${
+                    touched.name && errors.name ? styles.error : ""
+                  } ${touched.name && !errors.name ? styles.success : ""}`}
+                  placeholder="Nombre"
+                />
+                <ErrorMessage
+                  name="name"
+                  component="div"
+                  className={styles.errorMessage}
+                />
               </div>
-            )}
-          </Form>
-        )}
-      </Formik>
+
+              <div className={styles.formGroup}>
+                <Field
+                  type="email"
+                  name="email"
+                  className={`${styles.formInput} ${
+                    touched.email && errors.email ? styles.error : ""
+                  } ${touched.email && !errors.email ? styles.success : ""}`}
+                  placeholder="Correo electrónico"
+                />
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className={styles.errorMessage}
+                />
+              </div>
+
+              <div className={styles.formGroup}>
+                <Field
+                  as="textarea"
+                  name="message"
+                  className={`${styles.formInput} ${styles.formInputTextarea} ${
+                    touched.message && errors.message ? styles.error : ""
+                  } ${
+                    touched.message && !errors.message ? styles.success : ""
+                  }`}
+                  placeholder="Mensaje"
+                />
+                <ErrorMessage
+                  name="message"
+                  component="div"
+                  className={styles.errorMessage}
+                />
+              </div>
+
+              <button
+                type="submit"
+                className={styles.submitButton}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Enviando..." : "Enviar"}
+              </button>
+
+              {isSubmitting && <div className={styles.spinner}>🔄</div>}
+              {isSubmitted && !isSubmitting && (
+                <div className={styles.successMessage}>
+                  ¡Mensaje enviado con éxito!
+                </div>
+              )}
+            </Form>
+          )}
+        </Formik>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import styles from "../styles/Footer.module.css";
-
 import React, { useState } from "react";
 import { MdContentCopy } from "react-icons/md"; // Icono de copiar
 import { FaGithub, FaLinkedin, FaFileAlt, FaCheck } from "react-icons/fa"; // Íconos de GitHub, LinkedIn y CV
@@ -17,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footerContainer} id={styles.footer}>
       <div className={styles.container}>
         <p>
           <span className={styles.email}>ariel.feren.info@gmail.com</span>
@@ -28,7 +27,7 @@ const Footer = () => {
 
         <div className={styles.socialIcons}>
           <a
-            href="https://github.com/tu-perfil"
+            href="https://github.com/arieliten85"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.iconLink}
@@ -36,7 +35,7 @@ const Footer = () => {
             <FaGithub size={20} />
           </a>
           <a
-            href="https://linkedin.com/in/tu-perfil"
+            href="https://www.linkedin.com/in/arielferencak"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.iconLink}

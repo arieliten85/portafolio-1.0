@@ -185,7 +185,7 @@ export const Skills: React.FC = () => {
   ];
 
   return (
-    <section id={styles.skill}>
+    <section id="skill" className={styles.skill}>
       <h1 className={styles.skillsHeading}>Habilidades</h1>
       <section className={styles.skillsSection}>
         {["Frontend", "Backend", "Gestión"].map((category, idx) => (

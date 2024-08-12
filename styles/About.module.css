@@ -1,5 +1,4 @@
-.about {
-  margin-top: 80px;
+#about {
 }
 
 .aboutContent {
@@ -8,7 +7,7 @@
   gap: 1rem;
   min-height: 485px !important;
   padding: 1.5rem;
-
+  margin-top: 80px;
   max-width: 960px;
   margin: auto;
   width: 100%;

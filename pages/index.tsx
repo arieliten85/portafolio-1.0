@@ -4,16 +4,18 @@ import Footer from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import { Presentation } from "@/components/Presentation";
 import { Skills } from "@/components/Skills";
-import Works from "@/components/Works";
+import { Projects } from "@/components/Projects";
+import { ButtonHome } from "@/components/buttonHome";
 
 export default function Home() {
   return (
     <>
       <Navigation />
+      <ButtonHome />
       <Presentation />
       <AboutMe />
       <Skills />
-      <Works />
+      <Projects />
       <Contact />
       <Footer />
     </>

@@ -1,7 +1,3 @@
-#skill {
-  padding: 20px;
-}
-
 .skillsSection {
   display: flex;
   flex-direction: column;
@@ -12,9 +8,7 @@
   margin: auto;
   max-width: 930px;
   width: 100%;
-}
-
-.skillsHeading {
+  padding: 20px;
 }
 
 .skillCategory {

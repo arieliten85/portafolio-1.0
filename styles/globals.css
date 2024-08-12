@@ -52,9 +52,13 @@
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 html,
 body {
+  position: relative;
   background: var(--body-color) !important;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;

@@ -84,9 +84,15 @@ export const Navigation = () => {
     }
   };
 
+  const handleLinkClick = () => {
+    if (isOpen) {
+      handleToggle();
+    }
+  };
+
   return (
     <>
-      <div id={styles.nav}>
+      <div className={styles.nav} id="top">
         <div className={styles.navbarHeader}>
           <h2 className={styles.logo}>AriDev</h2>
           <button
@@ -120,16 +126,29 @@ export const Navigation = () => {
         <div className={styles.navbar} id={styles.navbar} ref={navbarRef}>
           <ul>
             <li>
-              <Link href={"/"}>Inicio</Link>
+              <Link href="#home" onClick={handleLinkClick}>
+                Inicio
+              </Link>
             </li>
             <li>
-              <Link href={"/"}>Sobre mí</Link>
+              <Link href="#about" onClick={handleLinkClick}>
+                Sobre mí
+              </Link>
             </li>
             <li>
-              <Link href={"/"}>Proyectos</Link>
+              <Link href="#skill" onClick={handleLinkClick}>
+                Habilidades
+              </Link>
             </li>
             <li>
-              <Link href={"/"}>Contacto</Link>
+              <Link href="#projects" onClick={handleLinkClick}>
+                Proyectos
+              </Link>
+            </li>
+            <li>
+              <Link href="#contact" onClick={handleLinkClick}>
+                Contacto
+              </Link>
             </li>
           </ul>
         </div>

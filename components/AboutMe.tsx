@@ -3,6 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaDownload } from "react-icons/fa";
 import styles from "../styles/About.module.css";
+import Link from "next/link";
 
 export default function AboutMe() {
   const controls = useAnimation();
@@ -21,7 +22,7 @@ export default function AboutMe() {
 
   return (
     <motion.div
-      className={styles.about}
+      id="about"
       ref={ref}
       initial={{ opacity: 0, y: 100 }}
       animate={controls}
@@ -33,10 +34,11 @@ export default function AboutMe() {
         <div className={styles.aboutText}>
           <span className={styles.span}>Quíen soy</span>
           <h2 className={styles.title}> Desarrollador Web</h2>
-          <button className={styles.btn}>
+
+          <Link href="/pdf/CV.pdf" target="_blank" className={styles.btn}>
             Descarga CV
             <FaDownload />
-          </button>
+          </Link>
         </div>
         <div className={styles.aboutData}>
           <p className={styles.text}>

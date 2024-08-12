@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-import styles from "../styles/Works.module.css";
+import styles from "../styles/Projects.module.css";
 import { items } from "@/pages/api/works/apiWorks";
 import Link from "next/link";
 
-const Works = () => {
+export const Projects = () => {
   const [flipped, setFlipped] = useState<number | null>(null);
   const { ref, inView } = useInView({
     triggerOnce: true, // Permitir múltiples activaciones
@@ -19,7 +19,7 @@ const Works = () => {
 
   return (
     <motion.div
-      id={styles.worksContent}
+      id="projects"
       ref={ref}
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }} // Animar opacidad basado en visibilidad
@@ -140,5 +140,3 @@ const Works = () => {
     </motion.div>
   );
 };
-
-export default Works;

@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "../styles/Presentation.module.css";
 import Image from "next/image";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import perfil from "../assets/perfil01.jpeg";
+import { FaFileAlt, FaGithub, FaLinkedin } from "react-icons/fa";
+
+import perfil from "../assets/perfil_image2.svg";
+import Link from "next/link";
 
 export const Presentation = () => {
   return (
-    <div id={styles.home} className={styles.container}>
+    <div id="home" className={styles.container}>
       <div className={styles.homeContent}>
         <Image
           className={`${styles.perfil} animate__animated animate__rotateIn animate__fast`}
@@ -38,20 +40,21 @@ export const Presentation = () => {
           </h3>
 
           <div className={styles.social}>
-            <a
-              href="https://github.com/tu-usuario"
+            <Link
+              href="https://github.com/arieliten85"
               target="_blank"
-              rel="noopener noreferrer"
+              className={styles.icon}
             >
               <FaGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/tu-usuario"
+            </Link>
+
+            <Link
+              href="https://www.linkedin.com/in/arielferencak"
               target="_blank"
-              rel="noopener noreferrer"
+              className={styles.icon}
             >
               <FaLinkedin />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

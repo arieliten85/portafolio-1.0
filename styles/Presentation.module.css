@@ -1,14 +1,12 @@
-#home {
-  padding-top: 150px !important;
-  min-height: 650px !important;
-  padding: 1.5rem;
-}
-
 .container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
+  padding-top: 70px !important;
+  min-height: 650px !important;
+  padding: 1.5rem;
 }
 
 .homeContent {
@@ -23,6 +21,8 @@
 }
 
 .homeContent .perfil {
+  border: var(--bg-color) solid;
+  overflow: hidden;
   width: 140px;
   height: 140px;
   border-radius: 70px;
@@ -92,18 +92,23 @@
   margin-top: 20px;
 }
 
-.social svg {
+.social .icon {
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--container-color);
+
   width: 40px; /* Tamaño del ícono */
   height: 40px; /* Tamaño del ícono */
-
-  transition: color 0.3s, transform 0.3s; /* Transición para el efecto hover */
-  color: var(--bg-color);
-  background: var(--container-color);
-  padding: 10px;
-  border-radius: 50%;
 }
 
-.social svg:hover {
-  color: #000; /* Cambia el color en hover */
+.social .icon {
+  transition: color 0.3s, transform 0.3s; /* Transición para el efecto hover */
+  color: var(--bg-color);
+}
+
+.social .icon:hover {
+  color: var(--main-color); /* Cambia el color en hover */
   transform: scale(1.1); /* Efecto de agrandamiento en hover */
 }

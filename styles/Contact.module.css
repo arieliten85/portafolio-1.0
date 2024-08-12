@@ -1,9 +1,10 @@
 /* src/components/ContactForm.module.css */
-
+#contact {
+}
 .container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .form {
