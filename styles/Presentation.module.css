@@ -29,6 +29,11 @@
   margin-bottom: 30px;
 }
 
+.perfil .image {
+  width: 100%;
+  height: 100%;
+}
+
 .homeText {
   display: flex;
   flex-direction: column;

@@ -2,42 +2,63 @@ import React from "react";
 import styles from "../styles/Presentation.module.css";
 import Image from "next/image";
 import { FaFileAlt, FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion"; // Importa Framer Motion
 
 import perfil from "../assets/perfil_image2.svg";
 import Link from "next/link";
 
 export const Presentation = () => {
   return (
-    <div id="home" className={styles.container}>
+    <motion.div
+      id="home"
+      className={styles.container}
+      initial={{ opacity: 0 }} // Estado inicial
+      animate={{ opacity: 1 }} // Animación cuando el componente se monta
+      transition={{ duration: 1.5 }} // Duración de la animación
+    >
       <div className={styles.homeContent}>
-        <Image
-          className={`${styles.perfil} animate__animated animate__rotateIn animate__fast`}
-          src={perfil}
-          alt="foto_perfil"
-          width={55}
-          height={52}
-          priority
-        />
+        <motion.div
+          className={styles.perfil}
+          initial={{ rotate: -180 }} // Rotación inicial
+          animate={{ rotate: 0 }} // Rotación al montarse
+          transition={{ duration: 1, ease: "easeOut" }} // Duración y tipo de animación
+        >
+          <Image
+            className={styles.image}
+            src={perfil}
+            alt="foto_perfil"
+            priority
+          />
+        </motion.div>
+
         <div className={styles.homeText}>
-          <p
-            className={`${styles.greeting} animate__animated animate__bounceInRight animate__delay-0.5s`}
+          <motion.p
+            className={styles.greeting}
+            initial={{ x: -100, opacity: 0 }} // Posición inicial
+            animate={{ x: 0, opacity: 1 }} // Animación cuando el componente se monta
+            transition={{ delay: 0.5, duration: 1 }} // Retraso y duración de la animación
           >
             Hola
-          </p>
-          <h2
-            className={`animate__animated animate__bounceInLeft animate__delay-0.5s`}
+          </motion.p>
+
+          <motion.h2
+            initial={{ x: 100, opacity: 0 }} // Posición inicial
+            animate={{ x: 0, opacity: 1 }} // Animación cuando el componente se monta
+            transition={{ delay: 0.5, duration: 1 }} // Retraso y duración de la animación
           >
             <span className={styles.span}>Soy</span> Ariel Ferencak
-          </h2>
-          <h3
-            className={`animate__animated animate__bounceInUp animate__delay-1.5s`}
+          </motion.h2>
+
+          <motion.h3
+            initial={{ y: 100, opacity: 0 }} // Posición inicial
+            animate={{ y: 0, opacity: 1 }} // Animación cuando el componente se monta
+            transition={{ delay: 1.5, duration: 1 }} // Retraso y duración de la animación
           >
             Soy un <span className={styles.resalt}>desarrollador web</span> con
             gran pasión por el desarrollo de aplicaciones y la experiencia de
-            usuario. Aquí {""}
-            encontrarás un poco más{" "}
+            usuario. Aquí encontrarás un poco más{" "}
             <span className={styles.resalt}>sobre mí</span>
-          </h3>
+          </motion.h3>
 
           <div className={styles.social}>
             <Link
@@ -58,6 +79,6 @@ export const Presentation = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
