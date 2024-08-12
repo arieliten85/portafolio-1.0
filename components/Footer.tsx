@@ -33,23 +33,30 @@ const Footer = () => {
         </p>
 
         <div className={styles.socialIcons}>
-          <a
+          <Link
             href="https://github.com/arieliten85"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.iconLink}
           >
             <FaGithub size={20} />
-          </a>
-          <a
+          </Link>
+
+          <Link
             href="https://www.linkedin.com/in/arielferencak"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.iconLink}
           >
             <FaLinkedin size={20} />
-          </a>
-          <Link href="/pdf/CV.pdf" target="_blank" className={styles.iconLink}>
+          </Link>
+
+          <Link
+            href="/pdf/CV.pdf"
+            target="_blank"
+            className={styles.iconLink}
+            rel="noopener noreferrer"
+          >
             <FaFileAlt size={20} />
           </Link>
         </div>

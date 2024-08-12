@@ -126,27 +126,47 @@ export const Navigation = () => {
         <div className={styles.navbar} id={styles.navbar} ref={navbarRef}>
           <ul>
             <li>
-              <Link href="#home" onClick={handleLinkClick}>
+              <Link
+                href="#home"
+                onClick={handleLinkClick}
+                rel="noopener noreferrer"
+              >
                 Inicio
               </Link>
             </li>
             <li>
-              <Link href="#about" onClick={handleLinkClick}>
+              <Link
+                href="#about"
+                onClick={handleLinkClick}
+                rel="noopener noreferrer"
+              >
                 Sobre mí
               </Link>
             </li>
             <li>
-              <Link href="#skill" onClick={handleLinkClick}>
+              <Link
+                href="#skill"
+                onClick={handleLinkClick}
+                rel="noopener noreferrer"
+              >
                 Habilidades
               </Link>
             </li>
             <li>
-              <Link href="#projects" onClick={handleLinkClick}>
+              <Link
+                href="#projects"
+                onClick={handleLinkClick}
+                rel="noopener noreferrer"
+              >
                 Proyectos
               </Link>
             </li>
             <li>
-              <Link href="#contact" onClick={handleLinkClick}>
+              <Link
+                href="#contact"
+                onClick={handleLinkClick}
+                rel="noopener noreferrer"
+              >
                 Contacto
               </Link>
             </li>

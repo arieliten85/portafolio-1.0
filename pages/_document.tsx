@@ -8,6 +8,7 @@ export default function Document() {
         {/* Preconnect to Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="icon" href="/ad-icon.ico" sizes="32x32" />
         {/* Link to Google Fonts */}
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
