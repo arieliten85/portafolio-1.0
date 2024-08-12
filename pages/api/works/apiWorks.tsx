@@ -20,7 +20,7 @@ export const items: Item[] = [
     image: image1,
     text: "Aplicación enfocada en una panadería, donde los usuarios pueden explorar y comprar una amplia variedad de productos clasificados por tipo. Las compras se coordinan exclusivamente con los vendedores a través de WhatsApp.",
     tags: ["React", "Typescript", "Node", "Sass", "MySql"],
-    repo: "https://github.com/arieliten85/tdm_app",
+    repo: "https://github.com/arieliten85/tdm_monorepo",
     web: "https://tododulcemary.netlify.app",
   },
   {
