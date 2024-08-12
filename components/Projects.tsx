@@ -129,7 +129,7 @@ export const Projects = () => {
                     className={styles.codeButton}
                     onClick={(e) => e.stopPropagation()}
                   >
-                    Demo
+                    Repo
                   </Link>
                 </div>
               </div>
