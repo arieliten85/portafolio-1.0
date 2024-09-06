@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import styles from "../styles/Projects.module.css";
-import { items } from "@/pages/api/works/apiWorks";
+import { Proyects } from "@/pages/api/works/apiWorks";
 import Link from "next/link";
 
 export const Projects = () => {
@@ -27,7 +27,7 @@ export const Projects = () => {
     >
       <h1 className={styles.skillsHeading}>Proyectos</h1>
       <div className={styles.worksContent}>
-        {items.map((item, index) => {
+        {Proyects.map((item, index) => {
           // Generar posiciones iniciales aleatorias
           const randomX = Math.random() * 200 - 100; // Entre -100 y 100
           const randomY = Math.random() * 200 - 100; // Entre -100 y 100

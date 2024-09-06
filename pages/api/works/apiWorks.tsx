@@ -3,9 +3,12 @@ import image2 from "../../../assets/works/test_authorizer_img.jpg";
 import image3 from "../../../assets/works/moovSee_image.jpg";
 import image4 from "../../../assets/works/paumac_img.jpg";
 import image5 from "../../../assets/works/thePerfectMentor_img.jpg";
+
+import image6 from "../../../assets/works/lauraLopez_img.jpg";
+
 import { StaticImageData } from "next/image";
 
-interface Item {
+interface ProyectsProps {
   name: string;
   image: StaticImageData;
   text: string;
@@ -14,7 +17,15 @@ interface Item {
   web: string;
 }
 
-export const items: Item[] = [
+export const Proyects: ProyectsProps[] = [
+  {
+    name: "Laura Lopez",
+    image: image6,
+    text: "Página web de sesiones fotográficas, capturando esos momentos únicos e irrepetibles, en diferentes etapas de la vida.(EN PROSESO)",
+    tags: ["React", "Typescript", "Node", "css", "MySql"],
+    repo: "https://github.com/arieliten85/Laura-lopez-Photo",
+    web: "https://laura-lopez-studio.netlify.app",
+  },
   {
     name: "Todo dulce mary",
     image: image1,
