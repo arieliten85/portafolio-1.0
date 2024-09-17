@@ -39,7 +39,7 @@ export const Proyects: ProyectsProps[] = [
     image: image2,
     text: "Los usuarios pueden registrarse proporcionando un nombre de usuario, contraseña y rol. Una vez registrados, pueden iniciar sesión y, dependiendo de su rol, tienen acceso a diferentes funciones a través de cuatro botones para verificar los permisos correspondientes.",
     tags: ["Next", "Typescript", "Java", "Springboot", "JWT", "Docker"],
-    repo: "https://github.com/arieliten85/TestRoleAccessAuth_API-SPRING",
+    repo: "https://github.com/arieliten85/-TestRoleAccessAuth-monorepo",
     web: "https://test-role-access-authority.vercel.app",
   },
   {
