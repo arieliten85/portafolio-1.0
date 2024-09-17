@@ -23,7 +23,7 @@ export const Proyects: ProyectsProps[] = [
     image: image6,
     text: "Página web de sesiones fotográficas, capturando esos momentos únicos e irrepetibles, en diferentes etapas de la vida.(EN PROSESO)",
     tags: ["React", "Typescript", "Node", "css", "MySql"],
-    repo: "https://github.com/arieliten85/Laura-lopez-Photo",
+    repo: "https://github.com/arieliten85/Laura-lopez-Photo-monorepo",
     web: "https://laura-lopez-studio.netlify.app",
   },
   {
